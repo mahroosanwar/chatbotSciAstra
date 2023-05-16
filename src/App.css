@@ -28,6 +28,20 @@
   color: #61dafb;
 }
 
+.icon-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+}
+
+.chatbot-container {
+  position: fixed;
+  bottom: 100px;
+  right: 0;
+  margin: 10px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

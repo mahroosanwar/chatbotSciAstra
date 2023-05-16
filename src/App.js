@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { UilCommentAltNotes } from "@iconscout/react-unicons";
+import { UilAngleDown } from "@iconscout/react-unicons";
 
 import ChatbotComponent from "./ChatbotComponent/ChatbotComponent";
 
@@ -8,8 +10,23 @@ function App() {
   const [showBot, toggleBot] = useState(false);
   return (
     <div className="App">
-      {showBot && <ChatbotComponent />}
-      <button onClick={() => toggleBot((prev) => !prev)}>Bot</button>
+      <div className="chatbot-container">{showBot && <ChatbotComponent />}</div>
+      <div className="icon-button">
+        {!showBot && (
+          <UilCommentAltNotes
+            onClick={() => toggleBot((prev) => !prev)}
+            size="50"
+            color="white"
+          />
+        )}
+        {showBot && (
+          <UilAngleDown
+            onClick={() => toggleBot((prev) => !prev)}
+            size="80"
+            color="white"
+          />
+        )}
+      </div>
     </div>
   );
 }

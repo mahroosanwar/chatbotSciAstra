@@ -2,10 +2,26 @@ import React from "react";
 
 const MessageParser = ({ children, actions }) => {
   const parse = (message) => {
+    const lowercaseMessage = message.toLowerCase();
     if (
-      message.includes("hello")
+      lowercaseMessage.includes("hi") ||
+      lowercaseMessage.includes("hello") ||
+      lowercaseMessage.includes("hey")
     ) {
       actions.handleHello();
+    }
+
+    if (
+      lowercaseMessage.includes("home") ||
+      lowercaseMessage.includes("courses") ||
+      lowercaseMessage.includes("selections") ||
+      lowercaseMessage.includes("blog") ||
+      lowercaseMessage.includes("materials") ||
+      lowercaseMessage.includes("contact") ||
+      lowercaseMessage.includes("login") ||
+      lowercaseMessage.includes("signup")
+    ) {
+      actions.handleNavigation();
     }
   };
 
