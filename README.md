@@ -8,6 +8,7 @@
 > When you type for navigate it will navigate to that page of SciAstra.
 > When you ask for FAQs, it gives the list of faqs and if to select form it will answer it. 
 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
